@@ -1,0 +1,13 @@
+[Unit]
+Description=Check camera and Restart motioneye
+After=multi-user.target
+
+[Service]
+Type=idle
+User=orangepi
+Restart=always
+RestartSec=3
+ExecStart=/usr/bin/python3 /home/orangepi/opi_dc/cam_check.py
+
+[Install]
+WantedBy=multi-user.target
