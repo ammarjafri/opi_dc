@@ -7,6 +7,8 @@ a=0
 check_cam = subprocess.Popen(com,shell=True,stdout=subprocess.PIPE).communicate()
 check_cam = check_cam[0]
 print(check_cam.decode())
+if check_cam.decode() == '':
+    print('found')
 #        for fi in check_cam:
     #         if a==0:
     #             pass
