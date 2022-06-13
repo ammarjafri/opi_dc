@@ -12,6 +12,7 @@ while True:
             while True:
                 try:
                     re_check_cam = subprocess.Popen(cams_c,shell=True,stdout=subprocess.PIPE).communicate()
+                    re_check_cam = re_check_cam[0]
                     if not re_check_cam.decode() == '':
                         print('camera connect again, restarting motioneye')
                         time.sleep(1)
