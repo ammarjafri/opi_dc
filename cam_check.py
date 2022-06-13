@@ -5,6 +5,7 @@ a=0
 #while True:
 #    try:
 check_cam = subprocess.Popen(com,shell=True,stdout=subprocess.PIPE).communicate()
+check_cam = check_cam[0]
 print(check_cam.decode())
 #        for fi in check_cam:
     #         if a==0:
